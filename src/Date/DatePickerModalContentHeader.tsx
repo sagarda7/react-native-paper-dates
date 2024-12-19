@@ -80,7 +80,7 @@ export default function DatePickerModalContentHeader(
   const finalExpandedIcon = calendarIcon ?? expandedIcon
 
   return (
-    <View style={[styles.header, {backgroundColor:  theme.colors.customHeaderColor}]}>
+    <View style={[styles.header]}>
       <View>
         <Text
           maxFontSizeMultiplier={1.5}
@@ -251,6 +251,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingLeft: 24,
     paddingRight: 12,
+    backgroundColor: '#dadaff' //custom by fieldEx
   },
   headerContentContainer: {
     flexDirection: 'row',

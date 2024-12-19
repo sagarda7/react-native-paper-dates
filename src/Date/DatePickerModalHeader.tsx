@@ -36,7 +36,7 @@ export default function DatePickerModalHeader(
           },
         ]}
       >
-         <Appbar style={[styles.appbarHeader, {backgroundColor: theme.colors.customHeaderColor}]}>
+         <Appbar style={[styles.appbarHeader]}>
           <Appbar.Action
             icon={closeIcon}
             accessibilityLabel={getTranslation(locale, 'close')}
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   appbarHeader: {
     elevation: 0,
-    backgroundColor: 'transparent',
+    backgroundColor: '#dadaff', //custom by fieldEx
   },
   buttonStyle: {
     paddingHorizontal: 8,
