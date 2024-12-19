@@ -80,7 +80,7 @@ export default function DatePickerModalContentHeader(
   const finalExpandedIcon = calendarIcon ?? expandedIcon
 
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, {backgroundColor:  theme.colors.customHeaderColor}]}>
       <View>
         <Text
           maxFontSizeMultiplier={1.5}

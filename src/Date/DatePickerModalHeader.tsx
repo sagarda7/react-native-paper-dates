@@ -36,7 +36,7 @@ export default function DatePickerModalHeader(
           },
         ]}
       >
-        <Appbar style={styles.appbarHeader}>
+         <Appbar style={[styles.appbarHeader, {backgroundColor: theme.colors.customHeaderColor}]}>
           <Appbar.Action
             icon={closeIcon}
             accessibilityLabel={getTranslation(locale, 'close')}
