@@ -43,6 +43,7 @@ export default function DatePickerModalHeader(
             onPress={props.onDismiss}
             color={color}
             testID="react-native-paper-dates-close"
+            style={{marginTop:30}}
           />
           <Appbar.Content title="" />
           <Button
@@ -52,6 +53,7 @@ export default function DatePickerModalHeader(
             uppercase={props.uppercase ?? true}
             contentStyle={styles.buttonStyle}
             testID="react-native-paper-dates-save"
+            style={{marginTop:30}}
           >
             {saveLabel}
           </Button>
