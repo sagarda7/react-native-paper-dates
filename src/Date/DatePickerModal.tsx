@@ -65,7 +65,7 @@ export function DatePickerModal(
   const dimensions = useWindowDimensions()
 
   return (
-    <View style={StyleSheet.absoluteFill} pointerEvents="box-none">
+    <View style={[StyleSheet.absoluteFill, {backgroundColor:'red'}]} pointerEvents="box-none" >
       <Modal
         animationType={animationTypeCalculated}
         transparent={!isPageSheet}
