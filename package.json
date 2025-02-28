@@ -167,6 +167,7 @@
     ]
   },
   "dependencies": {
-    "color": "^4.2.3"
+    "color": "^4.2.3",
+    "react-native-modal": "^13.0.1"
   }
 }
