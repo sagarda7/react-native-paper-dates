@@ -151,4 +151,4 @@ const styles = StyleSheet.create({
   },
 })
 
-const Year = memo(YearPure)
+const Year = (YearPure)

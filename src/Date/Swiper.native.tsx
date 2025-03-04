@@ -33,9 +33,12 @@ function getVisibleArray(
 function Swiper(props: SwiperProps) {
   return (
     <AutoSizer>
-      {({ width, height }) => (
-        <SwiperInner {...props} width={width} height={height} />
-      )}
+      {({ width, height }) => {
+        console.log("layout height, width", height, width);
+        return (
+          <SwiperInner {...props} width={width} height={height} />
+        )
+      }}
     </AutoSizer>
   )
 }
@@ -164,7 +167,7 @@ function SwiperInner({
               height: isHorizontal
                 ? height
                 : estimatedMonthHeight * totalMonths,
-              width: isHorizontal ? width * totalMonths : width,
+              width: isHorizontal ? width * totalMonths : width
             },
           ]}
         >
@@ -218,4 +221,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default memo(Swiper)
+export default (Swiper)

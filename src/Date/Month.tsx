@@ -490,4 +490,4 @@ export function getMonthHeight(
   return c || 0
 }
 
-export default memo(Month)
+export default (Month)

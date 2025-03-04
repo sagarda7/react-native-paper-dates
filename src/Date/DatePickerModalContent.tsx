@@ -221,4 +221,4 @@ export function DatePickerModalContent(
   )
 }
 
-export default memo(DatePickerModalContent)
+export default (DatePickerModalContent)
