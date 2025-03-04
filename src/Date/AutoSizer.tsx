@@ -19,7 +19,9 @@ export default function AutoSizer({
     (event: LayoutChangeEvent) => {
       const nl = event.nativeEvent.layout
       // https://github.com/necolas/react-native-web/issues/1704
+      console.log("Native Layout 111", nl.height, nl.width);
       if (!layout || layout.width !== nl.width || layout.height !== nl.height) {
+        console.log("Native Layout", nl.height, nl.width);
         setLayout({ width: nl.width, height: nl.height })
       }
     },

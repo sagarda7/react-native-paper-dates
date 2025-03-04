@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 import Swiper from './Swiper'
 import Month from './Month'
 import {
@@ -200,6 +200,7 @@ function Calendar(
             disableWeekDays={disableWeekDays}
             startWeekOnMonday={startWeekOnMonday || false}
           />
+          // <Text>Hello</Text>
         )}
         renderHeader={({ onPrev, onNext }) => (
           <CalendarHeader

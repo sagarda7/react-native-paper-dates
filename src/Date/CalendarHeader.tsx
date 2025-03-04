@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default memo(CalendarHeader)
+export default (CalendarHeader)
