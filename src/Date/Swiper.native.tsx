@@ -168,8 +168,7 @@ function SwiperInner({
               height: isHorizontal
                 ? height
                 : estimatedMonthHeight * totalMonths,
-              width: isHorizontal ? width * totalMonths : width,
-              backgroundColor: 'red'
+              width: isHorizontal ? width * totalMonths : width
             },
           ]}
         >
