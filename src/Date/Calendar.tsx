@@ -226,4 +226,4 @@ function Calendar(
   )
 }
 
-export default memo(Calendar)
+export default Calendar

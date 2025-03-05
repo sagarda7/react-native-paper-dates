@@ -171,4 +171,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default memo(Day)
+export default Day

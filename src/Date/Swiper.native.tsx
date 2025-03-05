@@ -221,4 +221,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default (Swiper)
+export default Swiper

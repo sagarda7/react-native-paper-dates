@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default memo(DayRange)
+export default DayRange

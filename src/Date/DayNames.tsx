@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
     height: dayNamesHeight,
   },
 })
-export default memo(DayNames)
+export default DayNames
