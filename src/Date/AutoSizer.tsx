@@ -30,7 +30,9 @@ export default function AutoSizer({
 
   return (
     <View
-      onLayout={onLayout}
+      onLayout={() => {
+        setTimeout(() => onLayout, 500)
+      }}
       style={[sharedStyles.overflowHidden, sharedStyles.root, layout && layout]}
     >
       {layout ? children(layout) : null}
