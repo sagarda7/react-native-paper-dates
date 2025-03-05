@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCallback, useState } from 'react'
 import { LayoutChangeEvent, View } from 'react-native'
 import { sharedStyles } from '../shared/styles'
@@ -17,25 +17,26 @@ export default function AutoSizer({
 
   const onLayout = useCallback(
     (event: LayoutChangeEvent) => {
-      const { width, height } = event.nativeEvent.layout;
-      console.log("Measured Layout:", width, height);
-  
-      if (width === 0 || height === 0) {
-        console.warn("Layout returned 0 width/height, delaying update...");
-        setTimeout(() => {
-          setLayout({ width, height });
-        }, 50); // Adjust delay if needed
-        return;
-      }
-  
-      if (!layout || layout.width !== width || layout.height !== height) {
-        setLayout({ width, height });
+      const nl = event.nativeEvent.layout
+      // https://github.com/necolas/react-native-web/issues/1704
+      console.log("Native Layout 111", nl.height, nl.width);
+      if (!layout || layout.width !== nl.width || layout.height !== nl.height) {
+        console.log("Native Layout", nl.height, nl.width);
+        setLayout({ width: nl.width, height: nl.height })
       }
     },
     [layout, setLayout]
-  );
-  
+  )
 
+  useEffect(() => {
+    if (layout?.width === 0 || layout?.height === 0) {
+      setTimeout(() => {
+        setLayout((prev:any) => ({ ...prev })); // Force re-render
+      }, 100);
+    }
+  }, [layout]);
+
+  
   return (
     <View
       onLayout={onLayout}
