@@ -168,7 +168,7 @@ function SwiperInner({
                 ? height
                 : estimatedMonthHeight * totalMonths,
               width: isHorizontal ? width * totalMonths : width,
-              backgroundColor: 'blue'
+              backgroundColor: 'red'
             },
           ]}
         >
