@@ -142,7 +142,8 @@
     "example/node_modules",
     "example/dist",
     "docusaurus",
-    "coverage"
+    "coverage",
+    "src"
   ],
   "prettier": {
     "quoteProps": "consistent",
@@ -168,6 +169,7 @@
   },
   "dependencies": {
     "color": "^4.2.3",
-    "react-native-modal": "^13.0.1"
+    "react-native-modal": "^13.0.1",
+    "react-native-modals": "^0.22.3"
   }
 }
