@@ -223,7 +223,7 @@ export default function Example() {
                   style={{ color: theme.colors.primary }}
                   variant="titleLarge"
                 >
-                  react-native-paper-dates
+                  react-native-paper-dates sagar
                 </Text>
                 <Text
                   maxFontSizeMultiplier={maxFontSizeMultiplier}

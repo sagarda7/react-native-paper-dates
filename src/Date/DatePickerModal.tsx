@@ -1,10 +1,10 @@
 import {
-  Modal,
   StyleSheet,
   TouchableWithoutFeedback,
   useWindowDimensions,
   View,
   Platform,
+  Modal
 } from 'react-native'
 import { useTheme } from 'react-native-paper'
 import DatePickerModalContent, {
@@ -12,6 +12,7 @@ import DatePickerModalContent, {
   DatePickerModalContentRangeProps,
   DatePickerModalContentSingleProps,
 } from './DatePickerModalContent'
+
 import React, { memo } from 'react'
 import { sharedStyles } from '../shared/styles'
 import { supportedOrientations } from '../shared/utils'
@@ -65,7 +66,7 @@ export function DatePickerModal(
   const dimensions = useWindowDimensions()
 
   return (
-    <View style={StyleSheet.absoluteFill} pointerEvents="box-none">
+    <View style={[StyleSheet.absoluteFill]} pointerEvents="box-none" >
       <Modal
         animationType={animationTypeCalculated}
         transparent={!isPageSheet}
