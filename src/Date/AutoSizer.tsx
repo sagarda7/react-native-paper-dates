@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useCallback, useState } from 'react'
 import { LayoutChangeEvent, View } from 'react-native'
 import { sharedStyles } from '../shared/styles'
@@ -28,15 +28,6 @@ export default function AutoSizer({
     [layout, setLayout]
   )
 
-  useEffect(() => {
-    if (layout?.width === 0 || layout?.height === 0) {
-      setTimeout(() => {
-        setLayout((prev:any) => ({ ...prev })); // Force re-render
-      }, 100);
-    }
-  }, [layout]);
-
-  
   return (
     <View
       onLayout={onLayout}
