@@ -17,22 +17,28 @@ export default function AutoSizer({
 
   const onLayout = useCallback(
     (event: LayoutChangeEvent) => {
-      const nl = event.nativeEvent.layout
-      // https://github.com/necolas/react-native-web/issues/1704
-      console.log("Native Layout 111", nl.height, nl.width);
-      if (!layout || layout.width !== nl.width || layout.height !== nl.height) {
-        console.log("Native Layout", nl.height, nl.width);
-        setLayout({ width: nl.width, height: nl.height })
+      const { width, height } = event.nativeEvent.layout;
+      console.log("Measured Layout:", width, height);
+  
+      if (width === 0 || height === 0) {
+        console.warn("Layout returned 0 width/height, delaying update...");
+        setTimeout(() => {
+          setLayout({ width, height });
+        }, 50); // Adjust delay if needed
+        return;
+      }
+  
+      if (!layout || layout.width !== width || layout.height !== height) {
+        setLayout({ width, height });
       }
     },
     [layout, setLayout]
-  )
+  );
+  
 
   return (
     <View
-      onLayout={() => {
-        setTimeout(() => onLayout, 500)
-      }}
+      onLayout={onLayout}
       style={[sharedStyles.overflowHidden, sharedStyles.root, layout && layout]}
     >
       {layout ? children(layout) : null}
