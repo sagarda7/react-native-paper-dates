@@ -19,6 +19,7 @@ import AutoSizer from './AutoSizer'
 import { memo, useCallback, useRef, useState } from 'react'
 import React from 'react'
 import { sharedStyles } from '../shared/styles'
+import AutoSizerV2 from './AutoSizerV2'
 
 function getVisibleArray(
   i: number,
@@ -32,14 +33,14 @@ function getVisibleArray(
 
 function Swiper(props: SwiperProps) {
   return (
-    <AutoSizer>
+    <AutoSizerV2>
       {({ width, height }) => {
         console.log("layout height, width", height, width);
         return (
           <SwiperInner {...props} width={width} height={height} />
         )
       }}
-    </AutoSizer>
+    </AutoSizerV2>
   )
 }
 
